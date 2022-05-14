@@ -18,7 +18,7 @@ fetch('appointment.json')
         {appointments.map(appointment=><AppointmentCard key={appointment._id} appointment={appointment} setTreatment={setTreatment}></AppointmentCard>)}
 </div> 
 {
-    treatment && <Bookingmodal treatment={treatment}></Bookingmodal>
+    treatment && <Bookingmodal treatment={treatment} date={date} setTreatment={setTreatment}></Bookingmodal>
 }
         </div>
     );
