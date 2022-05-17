@@ -14,7 +14,7 @@ fetch('http://localhost:5000/service')
     return (
         <div>
         <h3 className='text-2xl text-primary font-bold text-center mb-20'>Available Appointments on {format(date,'PP')}</h3>
-        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {appointments.map(appointment=><AppointmentCard key={appointment._id} appointment={appointment} setTreatment={setTreatment}></AppointmentCard>)}
 </div> 
 {
