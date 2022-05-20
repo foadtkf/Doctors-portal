@@ -8,6 +8,10 @@ import Loading from "../Shared/Loading";
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
+  let signInError;
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   
   const {
     register,
@@ -20,13 +24,7 @@ const Login = () => {
     loading,
     error,
 ] = useSignInWithEmailAndPassword(auth);
-if (user) {
-  console.log(user);
-}
-let signInError;
-const navigate = useNavigate();
-const location = useLocation();
-let from = location.state?.from?.pathname || "/";
+
 
 useEffect( () =>{
     if (user || gUser) {
