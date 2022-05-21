@@ -6,3 +6,4 @@
 - daisyui :npm i daisyui
 ###            add plugins: [require("daisyui")], to tailwind.config.js
 - react day picker: npm install react-day-picker date-fns 
+### need to learn react query
