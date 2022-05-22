@@ -10,12 +10,12 @@ const AvailableApointment = ({date}) => {
     
 const formatteddate=format(date,'PP')
 //     useEffect(()=>{
-// // fetch(`http://localhost:5000/available?date=${formatteddate}`)
+// // fetch(`https://frozen-plateau-78281.herokuapp.com/available?date=${formatteddate}`)
 // // .then(res=>res.json())
 // // .then(data=>setAppointments(data))
 // //     },[])
 
-    const {data: appointments, isLoading, refetch}=useQuery(['available', formatteddate],()=>fetch(`http://localhost:5000/available?date=${formatteddate}`).then(res=>res.json()))
+    const {data: appointments, isLoading, refetch}=useQuery(['available', formatteddate],()=>fetch(`https://frozen-plateau-78281.herokuapp.com/available?date=${formatteddate}`).then(res=>res.json()))
 
     if(isLoading){
         return <Loading></Loading>
